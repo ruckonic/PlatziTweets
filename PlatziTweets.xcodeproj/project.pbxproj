@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76579DDD248EBD6900BA85C5 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DDC248EBD6900BA85C5 /* EndPoints.swift */; };
+		76579DDF248EBE8C00BA85C5 /* PostLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DDE248EBE8C00BA85C5 /* PostLocation.swift */; };
+		76579DE1248EBEF000BA85C5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DE0248EBEF000BA85C5 /* Post.swift */; };
+		76579DE3248EBF4700BA85C5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DE2248EBF4700BA85C5 /* User.swift */; };
+		76579DE5248EC0AD00BA85C5 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DE4248EC0AD00BA85C5 /* LoginResponse.swift */; };
+		76579DE7248EC0C000BA85C5 /* ErrorResponse copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DE6248EC0C000BA85C5 /* ErrorResponse copy.swift */; };
+		76579DE9248EC14100BA85C5 /* GeneralResponse copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DE8248EC14000BA85C5 /* GeneralResponse copy.swift */; };
+		76579DEB248EC18C00BA85C5 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DEA248EC18C00BA85C5 /* LoginRequest.swift */; };
+		76579DED248EC19800BA85C5 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DEC248EC19800BA85C5 /* RegisterRequest.swift */; };
+		76579DEF248EC1B000BA85C5 /* PostRequestLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DEE248EC1B000BA85C5 /* PostRequestLocation.swift */; };
+		76579DF1248EC1D000BA85C5 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DF0248EC1D000BA85C5 /* PostRequest.swift */; };
 		76624805248AC0E900515D69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76624804248AC0E900515D69 /* AppDelegate.swift */; };
 		76624809248AC0E900515D69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76624808248AC0E900515D69 /* ViewController.swift */; };
 		7662480E248AC0EC00515D69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7662480D248AC0EC00515D69 /* Assets.xcassets */; };
@@ -23,6 +34,17 @@
 		099E7330DF4250A90701C74B /* Pods_PlatziTweets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatziTweets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4901063DDCDFF33F3F491A23 /* Pods-PlatziTweets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatziTweets.debug.xcconfig"; path = "Target Support Files/Pods-PlatziTweets/Pods-PlatziTweets.debug.xcconfig"; sourceTree = "<group>"; };
 		75D225AB61F073AB94720CCF /* Pods-PlatziTweets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatziTweets.release.xcconfig"; path = "Target Support Files/Pods-PlatziTweets/Pods-PlatziTweets.release.xcconfig"; sourceTree = "<group>"; };
+		76579DDC248EBD6900BA85C5 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		76579DDE248EBE8C00BA85C5 /* PostLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocation.swift; sourceTree = "<group>"; };
+		76579DE0248EBEF000BA85C5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		76579DE2248EBF4700BA85C5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		76579DE4248EC0AD00BA85C5 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		76579DE6248EC0C000BA85C5 /* ErrorResponse copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorResponse copy.swift"; sourceTree = "<group>"; };
+		76579DE8248EC14000BA85C5 /* GeneralResponse copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeneralResponse copy.swift"; sourceTree = "<group>"; };
+		76579DEA248EC18C00BA85C5 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		76579DEC248EC19800BA85C5 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		76579DEE248EC1B000BA85C5 /* PostRequestLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestLocation.swift; sourceTree = "<group>"; };
+		76579DF0248EC1D000BA85C5 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
 		76624801248AC0E900515D69 /* PlatziTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatziTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76624804248AC0E900515D69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76624808248AC0E900515D69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +78,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		76579DD9248EBCC300BA85C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				76579DDB248EBCD900BA85C5 /* Responses */,
+				76579DDA248EBCCF00BA85C5 /* Requests */,
+				76579DE0248EBEF000BA85C5 /* Post.swift */,
+				76579DE2248EBF4700BA85C5 /* User.swift */,
+				76579DDE248EBE8C00BA85C5 /* PostLocation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		76579DDA248EBCCF00BA85C5 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				76579DEC248EC19800BA85C5 /* RegisterRequest.swift */,
+				76579DEE248EC1B000BA85C5 /* PostRequestLocation.swift */,
+				76579DF0248EC1D000BA85C5 /* PostRequest.swift */,
+				76579DEA248EC18C00BA85C5 /* LoginRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		76579DDB248EBCD900BA85C5 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				76579DE6248EC0C000BA85C5 /* ErrorResponse copy.swift */,
+				76579DE8248EC14000BA85C5 /* GeneralResponse copy.swift */,
+				76579DE4248EC0AD00BA85C5 /* LoginResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
 		766247F8248AC0E900515D69 = {
 			isa = PBXGroup;
 			children = (
@@ -87,10 +142,12 @@
 		76624818248ACCAA00515D69 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				76579DD9248EBCC300BA85C5 /* Models */,
 				76624808248AC0E900515D69 /* ViewController.swift */,
 				7662480D248AC0EC00515D69 /* Assets.xcassets */,
 				7662480F248AC0EC00515D69 /* LaunchScreen.storyboard */,
 				76624804248AC0E900515D69 /* AppDelegate.swift */,
+				76579DDC248EBD6900BA85C5 /* EndPoints.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -251,8 +308,19 @@
 				76624820248AE7A300515D69 /* LoginViewController.swift in Sources */,
 				76624822248AE7B300515D69 /* RegisterViewController.swift in Sources */,
 				7662481E248AE77600515D69 /* WelcomeViewController.swift in Sources */,
+				76579DE1248EBEF000BA85C5 /* Post.swift in Sources */,
 				76624809248AC0E900515D69 /* ViewController.swift in Sources */,
+				76579DE5248EC0AD00BA85C5 /* LoginResponse.swift in Sources */,
+				76579DEB248EC18C00BA85C5 /* LoginRequest.swift in Sources */,
+				76579DEF248EC1B000BA85C5 /* PostRequestLocation.swift in Sources */,
+				76579DDD248EBD6900BA85C5 /* EndPoints.swift in Sources */,
+				76579DDF248EBE8C00BA85C5 /* PostLocation.swift in Sources */,
+				76579DE7248EC0C000BA85C5 /* ErrorResponse copy.swift in Sources */,
+				76579DF1248EC1D000BA85C5 /* PostRequest.swift in Sources */,
+				76579DE9248EC14100BA85C5 /* GeneralResponse copy.swift in Sources */,
 				76624805248AC0E900515D69 /* AppDelegate.swift in Sources */,
+				76579DED248EC19800BA85C5 /* RegisterRequest.swift in Sources */,
+				76579DE3248EBF4700BA85C5 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3ZV44D2SB;
 				INFOPLIST_FILE = PlatziTweets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -409,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3ZV44D2SB;
 				INFOPLIST_FILE = PlatziTweets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
