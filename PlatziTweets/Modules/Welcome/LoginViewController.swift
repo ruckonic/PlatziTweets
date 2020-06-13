@@ -52,8 +52,10 @@ class LoginViewController: UIViewController {
         SN.post(endpoint: Endpoints.login, model: request) { (response: SNResultWithEntity<LoginResponse, ErrorResponse>) in
             SVProgressHUD.dismiss()
             switch response {
-                case .success(let res):
+                case .success(let user):
                     self.performSegue(withIdentifier: "showHome", sender: nil)
+                    SimpleNetworking.setAuthenticationHeader(prefix: "", token: user.token)
+                    UserDefaults.standard.set(user.user.email, forKey: "mail")
 //                Todo Correcto
                 case .error(let error):
 //                 Todo lo malo

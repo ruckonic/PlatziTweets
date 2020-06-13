@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760730BF2491648200FE0DDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760730BE2491648200FE0DDC /* HomeViewController.swift */; };
+		763E5EE42491DBC700F03FBE /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763E5EE22491DBC700F03FBE /* TweetTableViewCell.swift */; };
+		763E5EE52491DBC700F03FBE /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 763E5EE32491DBC700F03FBE /* TweetTableViewCell.xib */; };
 		76579DDD248EBD6900BA85C5 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DDC248EBD6900BA85C5 /* EndPoints.swift */; };
 		76579DDF248EBE8C00BA85C5 /* PostLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DDE248EBE8C00BA85C5 /* PostLocation.swift */; };
 		76579DE1248EBEF000BA85C5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DE0248EBEF000BA85C5 /* Post.swift */; };
@@ -27,6 +30,7 @@
 		76624820248AE7A300515D69 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7662481F248AE7A300515D69 /* LoginViewController.swift */; };
 		76624822248AE7B300515D69 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76624821248AE7B300515D69 /* RegisterViewController.swift */; };
 		76624825248B203A00515D69 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76624824248B203A00515D69 /* Home.storyboard */; };
+		766DCB1E24946EE000916A6E /* PostTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766DCB1D24946EE000916A6E /* PostTweetViewController.swift */; };
 		7716BBD24D6EB9E5C7D180CA /* Pods_PlatziTweets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099E7330DF4250A90701C74B /* Pods_PlatziTweets.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,9 @@
 		099E7330DF4250A90701C74B /* Pods_PlatziTweets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlatziTweets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4901063DDCDFF33F3F491A23 /* Pods-PlatziTweets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatziTweets.debug.xcconfig"; path = "Target Support Files/Pods-PlatziTweets/Pods-PlatziTweets.debug.xcconfig"; sourceTree = "<group>"; };
 		75D225AB61F073AB94720CCF /* Pods-PlatziTweets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatziTweets.release.xcconfig"; path = "Target Support Files/Pods-PlatziTweets/Pods-PlatziTweets.release.xcconfig"; sourceTree = "<group>"; };
+		760730BE2491648200FE0DDC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		763E5EE22491DBC700F03FBE /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		763E5EE32491DBC700F03FBE /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
 		76579DDC248EBD6900BA85C5 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		76579DDE248EBE8C00BA85C5 /* PostLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocation.swift; sourceTree = "<group>"; };
 		76579DE0248EBEF000BA85C5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -56,6 +63,7 @@
 		7662481F248AE7A300515D69 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		76624821248AE7B300515D69 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		76624824248B203A00515D69 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		766DCB1D24946EE000916A6E /* PostTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTweetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,15 @@
 				099E7330DF4250A90701C74B /* Pods_PlatziTweets.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		763E5EE12491DB9200F03FBE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				763E5EE22491DBC700F03FBE /* TweetTableViewCell.swift */,
+				763E5EE32491DBC700F03FBE /* TweetTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		76579DD9248EBCC300BA85C5 /* Models */ = {
@@ -175,7 +192,10 @@
 		76624823248B1BCE00515D69 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				763E5EE12491DB9200F03FBE /* Cells */,
 				76624824248B203A00515D69 /* Home.storyboard */,
+				760730BE2491648200FE0DDC /* HomeViewController.swift */,
+				766DCB1D24946EE000916A6E /* PostTweetViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -249,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				763E5EE52491DBC700F03FBE /* TweetTableViewCell.xib in Resources */,
 				76624811248AC0EC00515D69 /* LaunchScreen.storyboard in Resources */,
 				7662480E248AC0EC00515D69 /* Assets.xcassets in Resources */,
 				7662481C248ACD6200515D69 /* Welcome.storyboard in Resources */,
@@ -308,6 +329,7 @@
 				76624820248AE7A300515D69 /* LoginViewController.swift in Sources */,
 				76624822248AE7B300515D69 /* RegisterViewController.swift in Sources */,
 				7662481E248AE77600515D69 /* WelcomeViewController.swift in Sources */,
+				760730BF2491648200FE0DDC /* HomeViewController.swift in Sources */,
 				76579DE1248EBEF000BA85C5 /* Post.swift in Sources */,
 				76624809248AC0E900515D69 /* ViewController.swift in Sources */,
 				76579DE5248EC0AD00BA85C5 /* LoginResponse.swift in Sources */,
@@ -315,12 +337,14 @@
 				76579DEF248EC1B000BA85C5 /* PostRequestLocation.swift in Sources */,
 				76579DDD248EBD6900BA85C5 /* EndPoints.swift in Sources */,
 				76579DDF248EBE8C00BA85C5 /* PostLocation.swift in Sources */,
+				763E5EE42491DBC700F03FBE /* TweetTableViewCell.swift in Sources */,
 				76579DE7248EC0C000BA85C5 /* ErrorResponse copy.swift in Sources */,
 				76579DF1248EC1D000BA85C5 /* PostRequest.swift in Sources */,
 				76579DE9248EC14100BA85C5 /* GeneralResponse copy.swift in Sources */,
 				76624805248AC0E900515D69 /* AppDelegate.swift in Sources */,
 				76579DED248EC19800BA85C5 /* RegisterRequest.swift in Sources */,
 				76579DE3248EBF4700BA85C5 /* User.swift in Sources */,
+				766DCB1E24946EE000916A6E /* PostTweetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

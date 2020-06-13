@@ -9,7 +9,7 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-    // MARK: -Outlets
+    // MARK: - Outlets
     @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
