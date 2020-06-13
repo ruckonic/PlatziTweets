@@ -39,5 +39,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
+    <key>NSCameraUsageDescription</key>
+    <string>Hey usaremos la camara para ver tu hermoso rostro 😂</string>
 </dict>
 </plist>
