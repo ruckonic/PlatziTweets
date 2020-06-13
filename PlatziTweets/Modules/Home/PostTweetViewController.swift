@@ -14,6 +14,7 @@ import NotificationBannerSwift
 class PostTweetViewController: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var newPostTextView : UITextView!
+    @IBOutlet weak var previewImageView : UIImageView!
     
     // MARK: - IBActions
     @IBAction func dimissView(_ sender : UIView){
@@ -21,9 +22,16 @@ class PostTweetViewController: UIViewController {
     }
     
     @IBAction func sendPost(_ sender : UIView){
-        print(newPostTextView.text ?? "no hay datos")
         self.submitPost()
     }
+    
+    @IBAction func openCameraAction() {
+        self.openCamera()
+    }
+    
+    
+    // MARK: - Properties
+    private var imagePicker: UIImagePickerController?
     
     
     override func viewDidLoad() {
@@ -31,6 +39,21 @@ class PostTweetViewController: UIViewController {
         
         setupUI()
         // Do any additional setup after loading the view.
+    }
+    
+    private func openCamera() {
+        imagePicker = UIImagePickerController()
+        imagePicker?.sourceType = .camera
+        imagePicker?.cameraFlashMode = .auto
+        imagePicker?.cameraCaptureMode = .photo
+        imagePicker?.allowsEditing = true
+        imagePicker?.delegate = self
+        
+        guard let imagePicker = imagePicker else {
+            return
+        }
+        
+        self.present(imagePicker, animated: true, completion: nil)
     }
     
     private func setupUI() {
@@ -64,4 +87,19 @@ class PostTweetViewController: UIViewController {
         }
     }
         
+}
+
+// MARK: - UIImagePickerControllerDelegate
+extension PostTweetViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // Cerrar camara
+        imagePicker?.dismiss(animated: true, completion: nil)
+        
+        if info.keys.contains(.originalImage) {
+            previewImageView.isHidden = false
+            
+            // obtener la imagen tomada
+            previewImageView.image = info[.originalImage] as? UIImage
+        }
+    }
 }

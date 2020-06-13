@@ -16,7 +16,6 @@ class TweetTableViewCell: UITableViewCell {
     @IBOutlet weak var imagePostImage: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var videoButton: UIButton!
-    @IBOutlet weak var containerImage: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,7 +37,6 @@ class TweetTableViewCell: UITableViewCell {
 //            configurar imagen
             self.imagePostImage.kf.setImage(with: URL(string: post.imageUrl))
         } else {
-            containerImage.isHidden = true
             imagePostImage.isHidden = true
             videoButton.isHidden = true
         }

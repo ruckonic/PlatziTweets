@@ -13,7 +13,7 @@ import NotificationBannerSwift
 
 class HomeViewController: UIViewController {
 
-//    MARK: IBOutlet
+//    MARK: - IBOutlet
     @IBOutlet weak var tableView : UITableView!
     
 //    MARK: Properties
