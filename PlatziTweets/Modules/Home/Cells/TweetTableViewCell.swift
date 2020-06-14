@@ -28,18 +28,19 @@ class TweetTableViewCell: UITableViewCell {
     }
     
     public func setupCell(post: Post) {
+        if post.hasImage {
+//            configurar imagen
+            self.videoButton.isHidden = true
+            self.imagePostImage.kf.setImage(with: URL(string: post.imageUrl))
+            self.imagePostImage.isHidden = false
+        } else {
+            self.imagePostImage.isHidden = true
+            self.videoButton.isHidden = true
+        }
         self.userNameLabel.text = post.author.names
         self.userNickLabel.text = post.author.nickname
         self.textPostLabel.text = post.text
         self.dateLabel.text = post.createdAt
-        
-        if post.hasImage {
-//            configurar imagen
-            self.imagePostImage.kf.setImage(with: URL(string: post.imageUrl))
-        } else {
-            imagePostImage.isHidden = true
-            videoButton.isHidden = true
-        }
     }
     
 }

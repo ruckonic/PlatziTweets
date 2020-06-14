@@ -61,6 +61,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBg" translatesAutoresizingMaskIntoConstraints="NO" id="qBR-kc-f3X">
                                 <rect key="frame" x="0.0" y="93" width="443" height="425"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="425" id="bRr-1d-aud"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="qBR-kc-f3X" secondAttribute="height" multiplier="1:1" id="f8k-QV-EJs"/>
                                 </constraints>
                             </imageView>

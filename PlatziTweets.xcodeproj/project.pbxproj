@@ -10,6 +10,7 @@
 		760730BF2491648200FE0DDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760730BE2491648200FE0DDC /* HomeViewController.swift */; };
 		763E5EE42491DBC700F03FBE /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763E5EE22491DBC700F03FBE /* TweetTableViewCell.swift */; };
 		763E5EE52491DBC700F03FBE /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 763E5EE32491DBC700F03FBE /* TweetTableViewCell.xib */; };
+		764C1A2C2495AB4D002EF8E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 764C1A2B2495AB4C002EF8E4 /* GoogleService-Info.plist */; };
 		76579DDD248EBD6900BA85C5 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DDC248EBD6900BA85C5 /* EndPoints.swift */; };
 		76579DDF248EBE8C00BA85C5 /* PostLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DDE248EBE8C00BA85C5 /* PostLocation.swift */; };
 		76579DE1248EBEF000BA85C5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579DE0248EBEF000BA85C5 /* Post.swift */; };
@@ -41,6 +42,7 @@
 		760730BE2491648200FE0DDC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		763E5EE22491DBC700F03FBE /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		763E5EE32491DBC700F03FBE /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
+		764C1A2B2495AB4C002EF8E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		76579DDC248EBD6900BA85C5 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		76579DDE248EBE8C00BA85C5 /* PostLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocation.swift; sourceTree = "<group>"; };
 		76579DE0248EBEF000BA85C5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		76624818248ACCAA00515D69 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				764C1A2B2495AB4C002EF8E4 /* GoogleService-Info.plist */,
 				76579DD9248EBCC300BA85C5 /* Models */,
 				76624808248AC0E900515D69 /* ViewController.swift */,
 				7662480D248AC0EC00515D69 /* Assets.xcassets */,
@@ -274,6 +277,7 @@
 				7662480E248AC0EC00515D69 /* Assets.xcassets in Resources */,
 				7662481C248ACD6200515D69 /* Welcome.storyboard in Resources */,
 				76624825248B203A00515D69 /* Home.storyboard in Resources */,
+				764C1A2C2495AB4D002EF8E4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
