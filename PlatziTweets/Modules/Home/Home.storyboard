@@ -132,6 +132,16 @@
                                             <action selector="openCameraAction" destination="ngj-CD-69e" eventType="touchUpInside" id="bpd-mZ-0UF"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3Z-1T-dcU">
+                                        <rect key="frame" x="0.0" y="185" width="374" height="0.0"/>
+                                        <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title=" Watch Video" image="play" catalog="system">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openPreviewAction" destination="ngj-CD-69e" eventType="touchUpInside" id="okz-r7-N92"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsB-W6-IEM">
                                         <rect key="frame" x="0.0" y="190" width="374" height="50"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -174,6 +184,7 @@
                     <connections>
                         <outlet property="newPostTextView" destination="Lbb-Eo-y7W" id="264-Pc-bEA"/>
                         <outlet property="previewImageView" destination="l85-RB-qTW" id="LGu-dJ-fIA"/>
+                        <outlet property="videoButton" destination="w3Z-1T-dcU" id="C7w-hD-Wg8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6K4-FD-kDy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -204,6 +215,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bottomImage" width="351.5" height="123"/>
+        <image name="play" catalog="system" width="120" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
     </resources>
 </document>

@@ -42,5 +42,8 @@
     
     <key>NSCameraUsageDescription</key>
     <string>Hey usaremos la camara para ver tu hermoso rostro 😂</string>
+    
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Hey usaremos la el microfono para escuchar tu hermosa voz 😂</string>
 </dict>
 </plist>
