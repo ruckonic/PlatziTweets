@@ -27,13 +27,23 @@ class PostTweetViewController: UIViewController {
     }
     
     @IBAction func sendPost(_ sender : UIView){
-        self.openVideoCamera()
-//        self.uploadPhotoToFirebase()
+        self.uploadMediaToFirebase()
     }
     
     @IBAction func openCameraAction() {
-         self.openVideoCamera()
-//        self.openCamera()
+        let alert = UIAlertController(title: "Camara", message: "Selecciona una opción", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Video", style: .default, handler: { (_) in
+            self.openVideoCamera()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Foto", style: .default, handler: { (_) in
+            self.openCamera()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func openPreviewAction() {
@@ -96,70 +106,44 @@ class PostTweetViewController: UIViewController {
         self.present(imagePicker, animated: true, completion: nil)
     }
     
-    private func uploadVideoToFirebase() {
-        // 1. Asegurarnos que la video exista
-        // 2. Convertir en Data el video
-        guard let currentVideoSaveURL = self.currentVideoURL, let videoSavedData: Data = try? Data(contentsOf: currentVideoSaveURL) else {
-            return
-        }
+    private func uploadMediaToFirebase() {
+        
         
         SVProgressHUD.show()
         
         // 3. Configuaracion para guardar la foto en firebase
         let metaDataConfig = StorageMetadata()
-        metaDataConfig.contentType = "video/MP4"
         
-        // 4. Referencias al storage de firebase
-        let storage = Storage.storage()
+        var fileData: Data?
+        var fileExtension: String = ""
+        var isVideo: Bool = false
         
-        // 5. Crear nombre de la video a subir
-        let videoName = Int.random(in: 100...1000)
-        
-        // 6. Referecia a la carpeta donde se guardara la foto
-        let folderReference = storage.reference(withPath: "videos-tweet/\(videoName).mp4")
-        
-        // 7. Subir la foto a firebase
-        DispatchQueue.global(qos: .background).async {
-            folderReference.putData(videoSavedData, metadata: metaDataConfig) { (metaData: StorageMetadata?, error: Error?) in
-                if let error = error {
-                    NotificationBanner(title: "Error", subtitle: "\(error.localizedDescription)", style: .warning).show()
-                    return
-                }
-                
-                // Obtener la URL de descarga
-                folderReference.downloadURL { (url: URL?, error: Error?) in
-                    let downloadUrl = url?.absoluteString ?? ""
-                    self.submitPost(imageUrl: downloadUrl, videoUrl: nil)
-                }
-            }
+        if let imageSaved = previewImageView.image {
+            
+            fileData = imageSaved.jpegData(compressionQuality: 0.1)
+            metaDataConfig.contentType = "image/jpg"
+            fileExtension = "jpg"
+            
+        } else if let currentVideoSaveURL = self.currentVideoURL {
+            
+            fileData = try? Data(contentsOf: currentVideoSaveURL)
+            metaDataConfig.contentType = "video/MP4"
+            fileExtension = "mp4"
+            isVideo = true
         }
-        
-    }
-    
-    private func uploadPhotoToFirebase() {
-        // 1. Asegurarnos que la foto exista
-        // 2. Comprimir la imagen y convertirla en Data
-        guard let imageSaved = previewImageView.image, let imageSavedData: Data = imageSaved.jpegData(compressionQuality: 0.1) else {
-            return
-        }
-        SVProgressHUD.show()
-        
-        // 3. Configuaracion para guardar la foto en firebase
-        let metaDataConfig = StorageMetadata()
-        metaDataConfig.contentType = "image/jpg"
         
         // 4. Referencias al storage de firebase
         let storage = Storage.storage()
         
         // 5. Crear nombre de la imagen a subir
-        let imageName = Int.random(in: 100...1000)
+        let fileName = Int.random(in: 100...1000)
         
         // 6. Referecia a la carpeta donde se guardara la foto
-        let folderReference = storage.reference(withPath: "fotos-tweet/\(imageName).jpg")
+        let folderReference = storage.reference(withPath: "\(isVideo ? "video" : "photo")-tweet/\(fileName).\(fileExtension)")
         
         // 7. Subir la foto a firebase
         DispatchQueue.global(qos: .background).async {
-            folderReference.putData(imageSavedData, metadata: metaDataConfig) { (metaData: StorageMetadata?, error: Error?) in
+            folderReference.putData(fileData ?? Data(), metadata: metaDataConfig) { (metaData: StorageMetadata?, error: Error?) in
                 if let error = error {
                     NotificationBanner(title: "Error", subtitle: "\(error.localizedDescription)", style: .warning).show()
                     return
@@ -167,8 +151,11 @@ class PostTweetViewController: UIViewController {
                 
                 // Obtener la URL de descarga
                 folderReference.downloadURL { (url: URL?, error: Error?) in
-                    let downloadUrl = url?.absoluteString ?? ""
-                    self.submitPost(imageUrl: downloadUrl, videoUrl: nil)
+                    let downloadUrl = url?.absoluteString ?? nil
+                    isVideo ?
+                        self.submitPost(imageUrl: nil, videoUrl: downloadUrl)
+                        :
+                        self.submitPost(imageUrl: downloadUrl, videoUrl: nil)
                 }
             }
         }

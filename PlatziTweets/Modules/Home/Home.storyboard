@@ -139,7 +139,7 @@
                                             <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="openPreviewAction" destination="ngj-CD-69e" eventType="touchUpInside" id="okz-r7-N92"/>
+                                            <action selector="openPreviewAction" destination="ngj-CD-69e" eventType="touchUpInside" id="py5-uq-MOr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsB-W6-IEM">
@@ -184,7 +184,7 @@
                     <connections>
                         <outlet property="newPostTextView" destination="Lbb-Eo-y7W" id="264-Pc-bEA"/>
                         <outlet property="previewImageView" destination="l85-RB-qTW" id="LGu-dJ-fIA"/>
-                        <outlet property="videoButton" destination="w3Z-1T-dcU" id="C7w-hD-Wg8"/>
+                        <outlet property="videoButton" destination="w3Z-1T-dcU" id="Svj-C4-JCn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6K4-FD-kDy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
