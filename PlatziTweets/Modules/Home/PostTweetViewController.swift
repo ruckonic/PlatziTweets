@@ -14,6 +14,7 @@ import FirebaseStorage
 import AVFoundation
 import AVKit
 import MobileCoreServices
+import CoreLocation
 
 class PostTweetViewController: UIViewController {
     // MARK: - IBOutlet
@@ -27,7 +28,10 @@ class PostTweetViewController: UIViewController {
     }
     
     @IBAction func sendPost(_ sender : UIView){
-        self.uploadMediaToFirebase()
+        if currentVideoURL != nil || previewImageView.image != nil {
+            self.uploadMediaToFirebase()
+        }
+        self.submitPost(imageUrl: nil, videoUrl: nil)
     }
     
     @IBAction func openCameraAction() {
@@ -64,13 +68,32 @@ class PostTweetViewController: UIViewController {
     // MARK: - Properties
     private var imagePicker: UIImagePickerController?
     private var currentVideoURL: URL?
+    private var locationManager: CLLocationManager?
+    private var userLocation: CLLocation?
+    
     
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
+        self.setupUI()
+        self.requestLocation()
         // Do any additional setup after loading the view.
+    }
+    
+    private func requestLocation() {
+        // Validamos que el usuario tenga el GPS activo y disponible
+        guard CLLocationManager.locationServicesEnabled() else {
+            return
+        }
+        
+        self.locationManager = CLLocationManager()
+        self.locationManager?.delegate = self
+        self.locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager?.requestAlwaysAuthorization()
+        self.locationManager?.startUpdatingLocation()
+        
+        
     }
     
     private func openVideoCamera() {
@@ -167,12 +190,19 @@ class PostTweetViewController: UIViewController {
     }
     
     private func submitPost(imageUrl: String?, videoUrl: String?) {
+        
+        var postLocation: PostRequestLocation?
+        
+        if let userLocation = self.userLocation {
+            postLocation = PostRequestLocation(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        }
+        
         guard let tweet = newPostTextView.text, !tweet.isEmpty else {
             NotificationBanner(subtitle: "El tweet esta vacio", style: .warning).show()
             
             return
         }
-        let request = PostRequest(text: tweet, imageUrl: imageUrl, videoUrl: videoUrl, location: nil)
+        let request = PostRequest(text: tweet, imageUrl: imageUrl, videoUrl: videoUrl, location: postLocation)
         SVProgressHUD.show()
         SN.post(endpoint: Endpoints.post, model: request) { (result : SNResultWithEntity< Post, ErrorResponse>) in
          SVProgressHUD.dismiss()
@@ -213,5 +243,16 @@ extension PostTweetViewController: UIImagePickerControllerDelegate, UINavigation
             self.videoButton.isHidden = false
             self.currentVideoURL = recordedVideoUrl
         }
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+extension PostTweetViewController : CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let bestLocation = locations.last else {
+            return
+        }
+//        Ya tenemos la Ubicacion del usuario
+        userLocation = bestLocation
     }
 }

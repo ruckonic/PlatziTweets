@@ -40,10 +40,17 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
     
-    <key>NSCameraUsageDescription</key>
-    <string>Hey usaremos la camara para ver tu hermoso rostro 😂</string>
     
-    <key>NSMicrophoneUsageDescription</key>
-    <string>Hey usaremos la el microfono para escuchar tu hermosa voz 😂</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Hey usaremos la camara para ver tu hermoso rostro 😂</string>
+    
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Hey usaremos la el microfono para escuchar tu hermosa voz 😂</string>
+    
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Usaremos la ubicacion para mostrar en el tweet</string>
+    
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Usaremos la ubicacion para mostrar en el tweet</string>
 </dict>
 </plist>
