@@ -54,7 +54,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DBx-eB-AAl"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tweets" leftItemsSupplementBackButton="YES" id="kfw-1Z-196"/>
+                    <navigationItem key="navigationItem" title="Tweets" leftItemsSupplementBackButton="YES" id="kfw-1Z-196">
+                        <barButtonItem key="rightBarButtonItem" title="Ver Mapa" id="xEe-tw-1Yq">
+                            <connections>
+                                <segue destination="k0y-oe-8Go" kind="show" identifier="showMap" id="xDK-Xm-gfZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0U9-NH-pVa" id="rG9-d1-MPb"/>
                     </connections>
@@ -62,6 +68,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9M-iu-itX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="602.89855072463774" y="-111.16071428571428"/>
+        </scene>
+        <!--Maps-->
+        <scene sceneID="Vbd-WC-LoL">
+            <objects>
+                <viewController id="k0y-oe-8Go" customClass="MapViewController" customModule="PlatziTweets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2q4-9c-5D2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A3V-X9-ASo">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="us0-12-Rw9" firstAttribute="bottom" secondItem="A3V-X9-ASo" secondAttribute="bottom" id="0KD-aI-Ukg"/>
+                            <constraint firstItem="A3V-X9-ASo" firstAttribute="top" secondItem="us0-12-Rw9" secondAttribute="top" id="DQ1-Ov-CkW"/>
+                            <constraint firstItem="A3V-X9-ASo" firstAttribute="leading" secondItem="us0-12-Rw9" secondAttribute="leading" id="eUe-ie-yfY"/>
+                            <constraint firstItem="us0-12-Rw9" firstAttribute="trailing" secondItem="A3V-X9-ASo" secondAttribute="trailing" id="oWX-Sc-fMJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="us0-12-Rw9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Maps" largeTitleDisplayMode="never" id="eyq-eC-Cbs"/>
+                    <connections>
+                        <outlet property="mapContainerView" destination="A3V-X9-ASo" id="xVF-hn-NFK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z89-aI-ck0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1577" y="-472"/>
         </scene>
         <!--Post Tweet View Controller-->
         <scene sceneID="RdN-4E-8TH">
@@ -189,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6K4-FD-kDy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573.913043478261" y="89.732142857142847"/>
+            <point key="canvasLocation" x="1577" y="232"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B3q-xb-J7V">
@@ -197,7 +234,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gT8-36-mts" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="oWB-uE-0s9">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -149,3 +149,16 @@ extension HomeViewController : UITableViewDelegate {
         
     }
 }
+
+// MARK: - Navegation
+extension HomeViewController {
+    // Este metodo se llamara cuando hagamos transiciones entre pantallas (solo con storyboard)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // 1. validar que el segue sea el esperado
+        if segue.identifier == "showMap", let mapVewController = segue.destination as? MapViewController {
+            // Aqui si ya sabemos que vamos hacia la pantalla
+            mapVewController.posts = self.dataSource.filter{ $0.hasLocation }
+            
+        }
+    }
+}

@@ -32,6 +32,7 @@
 		76624822248AE7B300515D69 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76624821248AE7B300515D69 /* RegisterViewController.swift */; };
 		76624825248B203A00515D69 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76624824248B203A00515D69 /* Home.storyboard */; };
 		766DCB1E24946EE000916A6E /* PostTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766DCB1D24946EE000916A6E /* PostTweetViewController.swift */; };
+		76F986DD2498166A007A7B74 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F986DC2498166A007A7B74 /* MapViewController.swift */; };
 		7716BBD24D6EB9E5C7D180CA /* Pods_PlatziTweets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099E7330DF4250A90701C74B /* Pods_PlatziTweets.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,8 @@
 		76624821248AE7B300515D69 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		76624824248B203A00515D69 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		766DCB1D24946EE000916A6E /* PostTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTweetViewController.swift; sourceTree = "<group>"; };
+		76F986DC2498166A007A7B74 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		76F986DE249892B8007A7B74 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = TestPlan.xctestplan; path = ../../TestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,7 @@
 		766247F8248AC0E900515D69 = {
 			isa = PBXGroup;
 			children = (
+				76F986DE249892B8007A7B74 /* TestPlan.xctestplan */,
 				76624803248AC0E900515D69 /* PlatziTweets */,
 				76624802248AC0E900515D69 /* Products */,
 				B0DAC5604782EF73353162DD /* Pods */,
@@ -199,6 +203,7 @@
 				76624824248B203A00515D69 /* Home.storyboard */,
 				760730BE2491648200FE0DDC /* HomeViewController.swift */,
 				766DCB1D24946EE000916A6E /* PostTweetViewController.swift */,
+				76F986DC2498166A007A7B74 /* MapViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				76624820248AE7A300515D69 /* LoginViewController.swift in Sources */,
 				76624822248AE7B300515D69 /* RegisterViewController.swift in Sources */,
 				7662481E248AE77600515D69 /* WelcomeViewController.swift in Sources */,
+				76F986DD2498166A007A7B74 /* MapViewController.swift in Sources */,
 				760730BF2491648200FE0DDC /* HomeViewController.swift in Sources */,
 				76579DE1248EBEF000BA85C5 /* Post.swift in Sources */,
 				76624809248AC0E900515D69 /* ViewController.swift in Sources */,
